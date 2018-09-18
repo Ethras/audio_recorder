@@ -1,6 +1,10 @@
 # Audio recorder
 
-[![pub package](https://img.shields.io/pub/v/audio_recorder.svg)](https://pub.dartlang.org/packages/audio_recorder) Record audio and store it locally 
+[![pub package](https://img.shields.io/pub/v/audio_recorder.svg)](https://pub.dartlang.org/packages/audio_recorder)
+[![Build Status](https://travis-ci.org/mmcc007/audio_recorder.svg?branch=master)](https://travis-ci.org/mmcc007/audio_recorder)
+[![Coverage Status](https://coveralls.io/repos/github/mmcc007/audio_recorder/badge.svg?branch=master)](https://coveralls.io/github/mmcc007/audio_recorder?branch=master)
+
+Record audio and store it locally
 
 ## Usage
 To use this plugin, add `audio_recorder` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
@@ -27,16 +31,16 @@ Make sure you add the following key to Info.plist for iOS
 import 'package:audio_recorder/audio_recorder.dart';
 
 // Check permissions before starting
-bool hasPermissions = await FlutterAudioRecorderPlugin.hasPermissions;
+bool hasPermissions = await AudioRecorder.hasPermissions;
 
 // Get the state of the recorder
-bool isRecording = await FlutterAudioRecorderPlugin.isRecording;
+bool isRecording = await AudioRecorder.isRecording;
 
 // Start recording
-await FlutterAudioRecorderPlugin.start(path: _controller.text, audioOutputFormat: AudioOutputFormat.AAC);
+await AudioRecorder.start(path: _controller.text, audioOutputFormat: AudioOutputFormat.AAC);
 
 // Stop recording
-Recording recording = await FlutterAudioRecorderPlugin.stop();
+Recording recording = await AudioRecorder.stop();
 print("Path : ${recording.path},  Format : ${recording.audioOutputFormat},  Duration : ${recording.duration},  Extension : ${recording.extension},");
 
 ```
