@@ -8,8 +8,8 @@ dependencies:
   path: ^1.5.1
   flutter:
     sdk: flutter
-  path_provider: ^0.4.1
-  file: ^5.0.4
+  path_provider: ^0.5.0+1
+  file: ^5.0.7
 
 environment:
   sdk: ">=2.0.0-dev.40.0.flutter-f981f09760 <3.0.0"
