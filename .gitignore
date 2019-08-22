@@ -19,3 +19,4 @@ android/\.settings/org\.eclipse\.buildship\.core\.prefs
 # coverage
 coverage
 lcov.info
+example/ios/Flutter/flutter_export_environment.sh
